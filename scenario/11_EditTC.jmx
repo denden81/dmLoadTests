@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="11_EditTC" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${count}</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${Chain1_User}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${period_run}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="Chain1_User" elementType="Argument">
+              <stringProp name="Argument.name">Chain1_User</stringProp>
+              <stringProp name="Argument.value">225</stringProp>
+              <stringProp name="Argument.desc">.юзер 10 шт</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="period_run" elementType="Argument">
+              <stringProp name="Argument.name">period_run</stringProp>
+              <stringProp name="Argument.value">1000</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">через сколько запускается след юзер</stringProp>
+            </elementProp>
+            <elementProp name="total_time" elementType="Argument">
+              <stringProp name="Argument.name">total_time</stringProp>
+              <stringProp name="Argument.value">600</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">обшее время</stringProp>
+            </elementProp>
+            <elementProp name="count" elementType="Argument">
+              <stringProp name="Argument.name">count</stringProp>
+              <stringProp name="Argument.value">20</stringProp>
+              <stringProp name="Argument.desc">кол-во запусков теста</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="const_timer" elementType="Argument">
+              <stringProp name="Argument.name">const_timer</stringProp>
+              <stringProp name="Argument.value">15000</stringProp>
+              <stringProp name="Argument.desc">таймер между действиями</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="random_time_offcet" elementType="Argument">
+              <stringProp name="Argument.name">random_time_offcet</stringProp>
+              <stringProp name="Argument.value">2000</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">время случайной паузы </stringProp>
+            </elementProp>
+            <elementProp name="random_time_dia" elementType="Argument">
+              <stringProp name="Argument.name">random_time_dia</stringProp>
+              <stringProp name="Argument.value">2000</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">небольшое отклонение от постоянной паузы</stringProp>
+            </elementProp>
+            <elementProp name="url" elementType="Argument">
+              <stringProp name="Argument.name">url</stringProp>
+              <stringProp name="Argument.value">https://dm-stage.artlogics.ru</stringProp>
+              <stringProp name="Argument.desc">url</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="servername" elementType="Argument">
+              <stringProp name="Argument.name">servername</stringProp>
+              <stringProp name="Argument.value">dm-stage.artlogics.ru</stringProp>
+              <stringProp name="Argument.desc">servername</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+          <stringProp name="ConstantTimer.delay">${const_timer}</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+          <stringProp name="ConstantTimer.delay">${random_time_offcet}</stringProp>
+          <stringProp name="RandomTimer.range">${random_time_dia}</stringProp>
+        </UniformRandomTimer>
+        <hashTree/>
+        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="random" enabled="true">
+          <stringProp name="maximumValue">8000000</stringProp>
+          <stringProp name="minimumValue">1</stringProp>
+          <stringProp name="outputFormat">Co_0</stringProp>
+          <boolProp name="perThread">true</boolProp>
+          <stringProp name="randomSeed"></stringProp>
+          <stringProp name="variableName">random</stringProp>
+        </RandomVariableConfig>
+        <hashTree/>
+        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="random2" enabled="true">
+          <stringProp name="maximumValue">8000000</stringProp>
+          <stringProp name="minimumValue">1</stringProp>
+          <stringProp name="outputFormat">city_0</stringProp>
+          <boolProp name="perThread">true</boolProp>
+          <stringProp name="randomSeed"></stringProp>
+          <stringProp name="variableName">random2</stringProp>
+        </RandomVariableConfig>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="1 /api/identity/login" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;login&quot;:&quot;&quot;,&quot;password&quot;:&quot;&quot;,&quot;language&quot;:&quot;ru&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${servername}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/identity/login</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">${url}/login</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Site" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">${url}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json;charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="accessToken" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">accessToken</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;accessToken&quot;:&quot;(.*?)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default"></stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="2 /api/availableVehicles/search" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;filter&quot;:{&quot;status&quot;:&quot;&quot;,&quot;createdAuthorId&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;&quot;,&quot;authorLastModifiedId&quot;:&quot;&quot;,&quot;dateLastModified&quot;:&quot;&quot;,&quot;timeSendListToSap&quot;:&quot;&quot;,&quot;sapResponseTime&quot;:&quot;&quot;,&quot;cityShipmentId&quot;:&quot;&quot;,&quot;startDate&quot;:&quot;&quot;,&quot;endDate&quot;:&quot;&quot;,&quot;sapNumber&quot;:&quot;&quot;,&quot;shipmentStatus&quot;:&quot;&quot;,&quot;deliveryRegionId&quot;:&quot;&quot;,&quot;transportCompanyId&quot;:&quot;&quot;,&quot;prop4&quot;:&quot;&quot;,&quot;prop5&quot;:&quot;&quot;,&quot;tailLift&quot;:&quot;&quot;,&quot;numberAvailableVehiclesContract&quot;:&quot;&quot;,&quot;numberAvailableVehiclesTc&quot;:&quot;&quot;,&quot;rows&quot;:[],&quot;orderId&quot;:null,&quot;datePeriodType&quot;:null,&quot;columns&quot;:[&quot;status&quot;,&quot;createdAuthorId&quot;,&quot;createdDate&quot;,&quot;authorLastModifiedId&quot;,&quot;dateLastModified&quot;,&quot;timeSendListToSap&quot;,&quot;sapResponseTime&quot;,&quot;cityShipmentId&quot;,&quot;startDate&quot;,&quot;endDate&quot;,&quot;sapNumber&quot;,&quot;shipmentStatus&quot;,&quot;deliveryRegionId&quot;,&quot;transportCompanyId&quot;,&quot;prop4&quot;,&quot;prop5&quot;,&quot;tailLift&quot;,&quot;numberAvailableVehiclesContract&quot;,&quot;numberAvailableVehiclesTc&quot;]},&quot;take&quot;:25,&quot;skip&quot;:0,&quot;sort&quot;:{&quot;name&quot;:&quot;dateLastModified&quot;,&quot;desc&quot;:true}}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${servername}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/availableVehicles/search</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">${url}/grid/availableVehicles</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Site" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">${url}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json;charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="3 /api/listAvailableVehicleState/search" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;status&quot;:&quot;&quot;,&quot;createdAuthorId&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;&quot;,&quot;authorLastModifiedId&quot;:&quot;&quot;,&quot;dateLastModified&quot;:&quot;&quot;,&quot;timeSendListToSap&quot;:&quot;&quot;,&quot;sapResponseTime&quot;:&quot;&quot;,&quot;cityShipmentId&quot;:&quot;&quot;,&quot;startDate&quot;:&quot;&quot;,&quot;endDate&quot;:&quot;&quot;,&quot;sapNumber&quot;:&quot;&quot;,&quot;shipmentStatus&quot;:&quot;&quot;,&quot;deliveryRegionId&quot;:&quot;&quot;,&quot;transportCompanyId&quot;:&quot;&quot;,&quot;prop4&quot;:&quot;&quot;,&quot;prop5&quot;:&quot;&quot;,&quot;tailLift&quot;:&quot;&quot;,&quot;numberAvailableVehiclesContract&quot;:&quot;&quot;,&quot;numberAvailableVehiclesTc&quot;:&quot;&quot;,&quot;rows&quot;:[],&quot;orderId&quot;:null,&quot;datePeriodType&quot;:null}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${servername}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/listAvailableVehicleState/search</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">${url}/grid/availableVehicles</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Site" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">${url}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json;charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="4 /api/userSettings/availableVehicles" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;value&quot;:&quot;{\&quot;RS\&quot;:[{\&quot;name\&quot;:\&quot;errText\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.errText\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Text\&quot;,\&quot;filterType\&quot;:\&quot;Text\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:363,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;sapNumber\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.sapNumber\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Number\&quot;,\&quot;filterType\&quot;:\&quot;Number\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:100,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;createdDate\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.createdDate\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;DateTime\&quot;,\&quot;filterType\&quot;:\&quot;DateTime\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:100,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;source\&quot;:\&quot;users\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;createdAuthorId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.createdAuthorId\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:100,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;dateLastModified\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.dateLastModified\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;DateTime\&quot;,\&quot;filterType\&quot;:\&quot;DateTime\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:100,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;source\&quot;:\&quot;users\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;authorLastModifiedId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.authorLastModifiedId\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:100,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;timeSendListToSap\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.timeSendListToSap\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;DateTime\&quot;,\&quot;filterType\&quot;:\&quot;DateTime\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:100,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;source\&quot;:\&quot;shipmentStatus\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;shipmentStatus\&quot;,\&quot;displayNameKey\&quot;:\&quot;shipmentStatus\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;State\&quot;,\&quot;filterType\&quot;:\&quot;State\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:true,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:304,\&quot;filter\&quot;:\&quot;unknown\&quot;},{\&quot;name\&quot;:\&quot;startDate\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.startDate\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Date\&quot;,\&quot;filterType\&quot;:\&quot;Date\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:185,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;source\&quot;:\&quot;transportCompanies\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;transportCompanyId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.transportCompany\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:304,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;endDate\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.endDate\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Date\&quot;,\&quot;filterType\&quot;:\&quot;Date\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:136,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;numberAvailableVehiclesTc\&quot;,\&quot;displayNameKey\&quot;:\&quot;numberAvailableVehiclesTc\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Integer\&quot;,\&quot;filterType\&quot;:\&quot;Integer\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:304,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;source\&quot;:\&quot;shippingCities\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;cityShipmentId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.cityShipment\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:304,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;highLess\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.highLess\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:114,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;tailLift\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.tailLift\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:114,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;prop4\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.prop4\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:114,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;prop5\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.prop5\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:114,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;numberAvailableVehiclesContract\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.numberAvailableVehicles\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Integer\&quot;,\&quot;filterType\&quot;:\&quot;Integer\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:114,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;pass\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.pass\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:114,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;source\&quot;:\&quot;deliveryRegions\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;deliveryRegionId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.deliveryRegion\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:114,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;tempRegime\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.tempRegime\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:114,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;source\&quot;:\&quot;listAvailableVehicleState\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;status\&quot;,\&quot;displayNameKey\&quot;:\&quot;listAvailableVehicleState\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;State\&quot;,\&quot;filterType\&quot;:\&quot;State\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:true,\&quot;isFilterDisabled\&quot;:true,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:114,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;source\&quot;:\&quot;transportTypes\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;transportTypeId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.transportType\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:114,\&quot;filter\&quot;:\&quot;\&quot;}],\&quot;для выгрузки как  по шаблону для загрузки\&quot;:[{\&quot;name\&quot;:\&quot;tailLift\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.tailLift\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:103,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;pass\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.pass\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:103,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;tempRegime\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.tempRegime\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:103,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;highLess\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.highLess\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:103,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;prop4\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.prop4\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:103,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;prop5\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.prop5\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:103,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;source\&quot;:\&quot;shipmentStatus\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;shipmentStatus\&quot;,\&quot;displayNameKey\&quot;:\&quot;shipmentStatus\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;State\&quot;,\&quot;filterType\&quot;:\&quot;State\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:true,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:194,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;source\&quot;:\&quot;listAvailableVehicleState\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;status\&quot;,\&quot;displayNameKey\&quot;:\&quot;listAvailableVehicleState\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;State\&quot;,\&quot;filterType\&quot;:\&quot;State\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:true,\&quot;isFilterDisabled\&quot;:true,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:173,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;sapNumber\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.sapNumber\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Number\&quot;,\&quot;filterType\&quot;:\&quot;Number\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:219,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;errText\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.errText\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Text\&quot;,\&quot;filterType\&quot;:\&quot;Text\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:103,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;startDate\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.startDate\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Date\&quot;,\&quot;filterType\&quot;:\&quot;Date\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:250,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;endDate\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.endDate\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Date\&quot;,\&quot;filterType\&quot;:\&quot;Date\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:250,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;source\&quot;:\&quot;transportCompanies\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;transportCompanyId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.transportCompany\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:250,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;source\&quot;:\&quot;shippingCities\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;cityShipmentId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.cityShipment\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:250,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:false},{\&quot;source\&quot;:\&quot;deliveryRegions\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;deliveryRegionId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.deliveryRegion\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:250,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;source\&quot;:\&quot;transportTypes\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;transportTypeId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.transportType\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:250,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;numberAvailableVehiclesContract\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.numberAvailableVehicles\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Integer\&quot;,\&quot;filterType\&quot;:\&quot;Integer\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:250,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null}],\&quot;apasukhov\&quot;:[{\&quot;name\&quot;:\&quot;createdDate\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.createdDate\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;LocalDateTime\&quot;,\&quot;filterType\&quot;:\&quot;LocalDateTime\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:672,\&quot;sort\&quot;:true},{\&quot;name\&quot;:\&quot;timeSendListToSap\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.timeSendListToSap\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;DateTime\&quot;,\&quot;filterType\&quot;:\&quot;DateTime\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:672,\&quot;sort\&quot;:null}],\&quot;kim\&quot;:[{\&quot;source\&quot;:\&quot;shipmentStatus\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;shipmentStatus\&quot;,\&quot;displayNameKey\&quot;:\&quot;shipmentStatus\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;State\&quot;,\&quot;filterType\&quot;:\&quot;State\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:true,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:147.9638900756836,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;errText\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.errText\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Text\&quot;,\&quot;filterType\&quot;:\&quot;Text\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:292.8374938964844,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;sapNumber\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.sapNumber\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Number\&quot;,\&quot;filterType\&quot;:\&quot;Number\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:61.8125,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;startDate\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.startDate\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Date\&quot;,\&quot;filterType\&quot;:\&quot;Date\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:119.85000610351562,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;endDate\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.endDate\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Date\&quot;,\&quot;filterType\&quot;:\&quot;Date\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:121,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;source\&quot;:\&quot;transportCompanies\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;transportCompanyId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.transportCompany\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:158.79998779296875,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;source\&quot;:\&quot;shippingCities\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;cityShipmentId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.cityShipment\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:145.26251220703125,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;source\&quot;:\&quot;deliveryRegions\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;deliveryRegionId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.deliveryRegion\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:121,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;source\&quot;:\&quot;transportTypes\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;transportTypeId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.transportType\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:70,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;tailLift\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.tailLift\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:132.7874755859375,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;highLess\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.highLess\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:57,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;tempRegime\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.tempRegime\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:60.637451171875,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;pass\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.pass\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:46.3125,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;prop4\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.prop4\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:59,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;prop5\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.prop5\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:50,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;numberAvailableVehiclesTc\&quot;,\&quot;displayNameKey\&quot;:\&quot;numberAvailableVehiclesTc\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Integer\&quot;,\&quot;filterType\&quot;:\&quot;Integer\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:67.0999755859375,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;numberAvailableVehiclesContract\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.numberAvailableVehicles\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Integer\&quot;,\&quot;filterType\&quot;:\&quot;Integer\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:94.0001220703125,\&quot;filter\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;createdDate\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.createdDate\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;LocalDateTime\&quot;,\&quot;filterType\&quot;:\&quot;LocalDateTime\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:161,\&quot;filter\&quot;:\&quot;\&quot;}],\&quot;test-tm1\&quot;:[{\&quot;source\&quot;:\&quot;users\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;authorLastModifiedId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.authorLastModifiedId\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:912},{\&quot;name\&quot;:\&quot;sapResponseTime\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.sapResponseTime\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;DateTime\&quot;,\&quot;filterType\&quot;:\&quot;DateTime\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:912}],\&quot;тест обучение\&quot;:[{\&quot;name\&quot;:\&quot;createdDate\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.createdDate\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;LocalDateTime\&quot;,\&quot;filterType\&quot;:\&quot;LocalDateTime\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:260,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;dateLastModified\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.dateLastModified\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;LocalDateTime\&quot;,\&quot;filterType\&quot;:\&quot;LocalDateTime\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:912}],\&quot;SVET_для веера\&quot;:[{\&quot;source\&quot;:\&quot;listAvailableVehicleState\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;status\&quot;,\&quot;displayNameKey\&quot;:\&quot;listAvailableVehicleState\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;State\&quot;,\&quot;filterType\&quot;:\&quot;State\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:true,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:313,\&quot;filter\&quot;:\&quot;parent\&quot;},{\&quot;source\&quot;:\&quot;shipmentStatus\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;shipmentStatus\&quot;,\&quot;displayNameKey\&quot;:\&quot;shipmentStatus\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;State\&quot;,\&quot;filterType\&quot;:\&quot;State\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:true,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:138},{\&quot;name\&quot;:\&quot;dateLastModified\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.dateLastModified\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;LocalDateTime\&quot;,\&quot;filterType\&quot;:\&quot;LocalDateTime\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:183},{\&quot;name\&quot;:\&quot;startDate\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.startDate\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Date\&quot;,\&quot;filterType\&quot;:\&quot;Date\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:154},{\&quot;name\&quot;:\&quot;errText\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.errText\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Text\&quot;,\&quot;filterType\&quot;:\&quot;Text\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:245},{\&quot;source\&quot;:\&quot;users\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;authorLastModifiedId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.authorLastModifiedId\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:131},{\&quot;source\&quot;:\&quot;users\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;createdAuthorId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.createdAuthorId\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:105},{\&quot;name\&quot;:\&quot;createdDate\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.createdDate\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;LocalDateTime\&quot;,\&quot;filterType\&quot;:\&quot;LocalDateTime\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:105},{\&quot;name\&quot;:\&quot;timeSendListToSap\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.timeSendListToSap\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;DateTime\&quot;,\&quot;filterType\&quot;:\&quot;DateTime\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:105},{\&quot;name\&quot;:\&quot;sapResponseTime\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.sapResponseTime\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;DateTime\&quot;,\&quot;filterType\&quot;:\&quot;DateTime\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:105},{\&quot;name\&quot;:\&quot;sapNumber\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.sapNumber\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Integer\&quot;,\&quot;filterType\&quot;:\&quot;Integer\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:105},{\&quot;source\&quot;:\&quot;transportCompanies\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;transportCompanyId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.transportCompany\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:105},{\&quot;datePeriodType\&quot;:null},{}],\&quot;anna1\&quot;:[{\&quot;source\&quot;:\&quot;listAvailableVehicleState\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;status\&quot;,\&quot;displayNameKey\&quot;:\&quot;listAvailableVehicleState\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;State\&quot;,\&quot;filterType\&quot;:\&quot;State\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:true,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:100,\&quot;filter\&quot;:\&quot;parent\&quot;},{\&quot;source\&quot;:\&quot;users\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;createdAuthorId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.createdAuthorId\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:121,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;createdDate\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.createdDate\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;LocalDateTime\&quot;,\&quot;filterType\&quot;:\&quot;LocalDateTime\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:165,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;source\&quot;:\&quot;users\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;authorLastModifiedId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.authorLastModifiedId\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:165,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;dateLastModified\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.dateLastModified\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;LocalDateTime\&quot;,\&quot;filterType\&quot;:\&quot;LocalDateTime\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:165,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:true},{\&quot;name\&quot;:\&quot;timeSendListToSap\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.timeSendListToSap\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;DateTime\&quot;,\&quot;filterType\&quot;:\&quot;DateTime\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:165,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;sapResponseTime\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.sapResponseTime\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;DateTime\&quot;,\&quot;filterType\&quot;:\&quot;DateTime\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:165,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;source\&quot;:\&quot;shippingCities\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;cityShipmentId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.cityShipment\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:165,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;startDate\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.startDate\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Date\&quot;,\&quot;filterType\&quot;:\&quot;Date\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:165,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;endDate\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.endDate\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Date\&quot;,\&quot;filterType\&quot;:\&quot;Date\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:165,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;sapNumber\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicles.sapNumber\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Integer\&quot;,\&quot;filterType\&quot;:\&quot;Integer\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:117,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;source\&quot;:\&quot;shipmentStatus\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;shipmentStatus\&quot;,\&quot;displayNameKey\&quot;:\&quot;shipmentStatus\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;State\&quot;,\&quot;filterType\&quot;:\&quot;State\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:true,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:165,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;source\&quot;:\&quot;deliveryRegions\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;deliveryRegionId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.deliveryRegion\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:130,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;source\&quot;:\&quot;transportCompanies\&quot;,\&quot;showRawValue\&quot;:false,\&quot;name\&quot;:\&quot;transportCompanyId\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.transportCompany\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Select\&quot;,\&quot;filterType\&quot;:\&quot;Select\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:130,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;prop4\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.prop4\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:107,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;prop5\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.prop5\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:false,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:107,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;tailLift\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.tailLift\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Boolean\&quot;,\&quot;filterType\&quot;:\&quot;Boolean\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:100,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;numberAvailableVehiclesContract\&quot;,\&quot;displayNameKey\&quot;:\&quot;availableVehicleImport.numberAvailableVehicles\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Integer\&quot;,\&quot;filterType\&quot;:\&quot;Integer\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:true,\&quot;isReadOnly\&quot;:false,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:100,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;name\&quot;:\&quot;numberAvailableVehiclesTc\&quot;,\&quot;displayNameKey\&quot;:\&quot;numberAvailableVehiclesTc\&quot;,\&quot;dynamicDisplayName\&quot;:null,\&quot;type\&quot;:\&quot;Integer\&quot;,\&quot;filterType\&quot;:\&quot;Integer\&quot;,\&quot;isDefault\&quot;:true,\&quot;isFixedPosition\&quot;:false,\&quot;isRequired\&quot;:false,\&quot;isReadOnly\&quot;:true,\&quot;isSortDisabled\&quot;:false,\&quot;isFilterDisabled\&quot;:false,\&quot;isHide\&quot;:false,\&quot;decimals\&quot;:null,\&quot;pattern\&quot;:null,\&quot;placeholder\&quot;:null,\&quot;maxLength\&quot;:null,\&quot;minLength\&quot;:null,\&quot;max\&quot;:null,\&quot;min\&quot;:null,\&quot;emptyValue\&quot;:\&quot;notAllowed\&quot;,\&quot;width\&quot;:100,\&quot;filter\&quot;:\&quot;\&quot;,\&quot;sort\&quot;:null},{\&quot;datePeriodType\&quot;:null},{}]}&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${servername}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/userSettings/availableVehicles</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">${url}/grid/availableVehicles</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Site" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">${url}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json;charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="5 /api/availableVehicles/search" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;filter&quot;:{&quot;status&quot;:&quot;parent&quot;,&quot;createdAuthorId&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;&quot;,&quot;authorLastModifiedId&quot;:&quot;&quot;,&quot;dateLastModified&quot;:&quot;&quot;,&quot;timeSendListToSap&quot;:&quot;&quot;,&quot;sapResponseTime&quot;:&quot;&quot;,&quot;cityShipmentId&quot;:&quot;&quot;,&quot;startDate&quot;:&quot;&quot;,&quot;endDate&quot;:&quot;&quot;,&quot;sapNumber&quot;:&quot;&quot;,&quot;shipmentStatus&quot;:&quot;&quot;,&quot;deliveryRegionId&quot;:&quot;&quot;,&quot;transportCompanyId&quot;:&quot;&quot;,&quot;prop4&quot;:&quot;&quot;,&quot;prop5&quot;:&quot;&quot;,&quot;tailLift&quot;:&quot;&quot;,&quot;numberAvailableVehiclesContract&quot;:&quot;&quot;,&quot;numberAvailableVehiclesTc&quot;:&quot;&quot;,&quot;rows&quot;:[],&quot;orderId&quot;:null,&quot;datePeriodType&quot;:null,&quot;columns&quot;:[&quot;status&quot;,&quot;createdAuthorId&quot;,&quot;createdDate&quot;,&quot;authorLastModifiedId&quot;,&quot;dateLastModified&quot;,&quot;timeSendListToSap&quot;,&quot;sapResponseTime&quot;,&quot;cityShipmentId&quot;,&quot;startDate&quot;,&quot;endDate&quot;,&quot;sapNumber&quot;,&quot;shipmentStatus&quot;,&quot;deliveryRegionId&quot;,&quot;transportCompanyId&quot;,&quot;prop4&quot;,&quot;prop5&quot;,&quot;tailLift&quot;,&quot;numberAvailableVehiclesContract&quot;,&quot;numberAvailableVehiclesTc&quot;]},&quot;take&quot;:250,&quot;skip&quot;:0,&quot;sort&quot;:{&quot;name&quot;:&quot;dateLastModified&quot;,&quot;desc&quot;:true}}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${servername}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/availableVehicles/search</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://dm-dev.artlogics.ru/grid/availableVehicles</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Site" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://dm-dev.artlogics.ru</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json;charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="order" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">order</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;id&quot;:&quot;([^&quot;]*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default"></stringProp>
+            <stringProp name="RegexExtractor.match_number">0</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="6 /api/fieldProperties/getField" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;forEntity&quot;:&quot;availableVehicles&quot;,&quot;fieldName&quot;:&quot;endDate&quot;,&quot;state&quot;:&quot;parent&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${servername}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/fieldProperties/getField</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">${url}/grid/availableVehicles</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Site" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">${url}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json;charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="7 /api/availableVehicles/invokeBulkUpdate/endDate" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;ids&quot;:[&quot;${order}&quot;],&quot;value&quot;:&quot;04.03.22&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${servername}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/availableVehicles/invokeBulkUpdate/endDate</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">${url}/grid/availableVehicles</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Site" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">${url}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json;charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
